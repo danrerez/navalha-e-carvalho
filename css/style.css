@@ -959,9 +959,17 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    justify-content: safe center;
+    padding-top: calc(var(--header-h) + 2vh);
+    padding-bottom: 2vh;
     overflow: hidden;
   }
+  .ritual.is-horizontal .ritual__head { margin-bottom: clamp(20px, 4vh, 48px); }
+  .ritual.is-horizontal .ritual__head .eyebrow { margin-bottom: clamp(10px, 2vh, 22px); }
+  .ritual.is-horizontal .ritual__head .title { font-size: clamp(2.3rem, 6.5vh, 4.6rem); }
+  .ritual.is-horizontal .step__media { margin-bottom: clamp(12px, 2vh, 22px); }
+  .ritual.is-horizontal .step h3 { font-size: clamp(26px, 4vh, 40px); }
   .ritual.is-horizontal .ritual__track {
     display: flex;
     gap: clamp(40px, 4vw, 72px);
@@ -970,8 +978,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
     width: max-content;
     padding-inline: max(var(--gutter), calc((100vw - 1320px) / 2 + var(--gutter)));
   }
-  .ritual.is-horizontal .step { width: clamp(340px, 30vw, 460px); flex-shrink: 0; }
-  .ritual.is-horizontal .step:nth-child(even) { margin-top: 72px; }
+  .ritual.is-horizontal .step { width: clamp(300px, min(30vw, 42vh), 460px); flex-shrink: 0; }
+  .ritual.is-horizontal .step:nth-child(even) { margin-top: clamp(24px, 5vh, 56px); }
 }
 
 @media (max-width: 1099px) {
